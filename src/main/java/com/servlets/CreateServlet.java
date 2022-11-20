@@ -35,7 +35,8 @@ public class CreateServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Student student = null;
+		response.getWriter().write("List after add student \n");
+		Student student = new Student();
 		student.setFullName(request.getParameter("fullName"));
 		student.setAge(Integer.parseInt(request.getParameter("age")));
 		studentService.create(student);

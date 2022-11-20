@@ -35,7 +35,8 @@ public class UpdateServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Student student = null;
+		Student student = new Student();
+		student.setId(Integer.parseInt(request.getParameter("id")));
 		student.setFullName(request.getParameter("fullName"));
 		student.setAge(Integer.parseInt(request.getParameter("age")));
 		studentService.update(student);
