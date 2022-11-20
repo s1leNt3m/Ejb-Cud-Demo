@@ -36,15 +36,15 @@ public class CreateServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().write("List after add student \n");
-		Student student = new Student();
-		student.setFullName(request.getParameter("fullName"));
-		student.setAge(Integer.parseInt(request.getParameter("age")));
-		studentService.create(student);
-		response.getWriter().write("List after add student \n");
-		List<Student> students = studentService.findAll();
-		for (Student s : students) {
-			response.getWriter().write("Id:" + s.getId() + " Fullname: " + s.getFullName() +" Age: " + s.getAge()+"\n");
-		}
+//		Student student = new Student();
+//		student.setFullName(request.getParameter("fullName"));
+//		student.setAge(Integer.parseInt(request.getParameter("age")));
+//		studentService.create(student);
+//		response.getWriter().write("List after add student \n");
+//		List<Student> students = studentService.findAll();
+//		for (Student s : students) {
+//			response.getWriter().write("Id:" + s.getId() + " Fullname: " + s.getFullName() +" Age: " + s.getAge()+"\n");
+//		}
 		
 		
 		
