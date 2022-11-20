@@ -1,5 +1,6 @@
 package com.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.LocalBean;
@@ -52,10 +53,9 @@ public class StudentService implements StudentServiceRemote {
 	@Override
 	public List<Student> findAll() {
 		Transaction transaction = null;
-		List<Student> students = null;
+		List<Student> students = new ArrayList<>();
 		try (Session session = factory.openSession()) {
 			transaction = session.beginTransaction();
-
 			students = session.createQuery("SELECT s FROM student s").getResultList();
 			session.close();
 
