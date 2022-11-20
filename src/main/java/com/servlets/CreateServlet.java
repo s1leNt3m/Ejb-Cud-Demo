@@ -45,6 +45,9 @@ public class CreateServlet extends HttpServlet {
 		for (Student s : students) {
 			response.getWriter().write("Id:" + s.getId() + " Fullname: " + s.getFullName() +" Age: " + s.getAge()+"\n");
 		}
+		
+		
+		
 	}
 
 	/**
